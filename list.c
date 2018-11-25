@@ -11,7 +11,7 @@ The comments aren't always the exact same implementation as the real code.
 
 //Create-----------------------------------------------------------------------------
 static SLnodePtr createSLlist(int m) {
-  for (struct SLnode *SL = malloc(16); ((*SL).next = ((m != 1)? createSLlist(m-1):NULL), (*SL).key = ((*SL).next != NULL)? (rand()%((*(*SL).next).key-y)+y):((rand() % (y-1)) + y));) return SL;
+  for (struct SLnode *SL = malloc(16); ((*SL).next = ((m != 1)? createSLlist(m-1):NULL), (*SL).key = ((*SL).next != NULL)? (rand()%((*(*SL).next).key-y+1)+y):((rand() % (y-1)) + y));) return SL;
 }
 /* Description of createSLlist:
 static SLnodePtr createSLlist(int m) {
